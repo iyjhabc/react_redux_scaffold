@@ -1,8 +1,15 @@
 //webpack.config.js
+var path = require('path');
+
+var srcRoot = path.join(__dirname, 'resources/src');
+
 module.exports = {
     entry: './resources/src/index.jsx',
     output: {
         filename: 'bundle.js'
+    },
+    resolve: {
+        root: [srcRoot]//set relative path
     },
     module: {
         loaders: [{
