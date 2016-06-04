@@ -4,8 +4,11 @@ import { Provider ,connect } from 'react-redux';
 import Change from 'components/Change/index.jsx'
 import Hello from 'components/Hello/index.jsx'
 import IndexPage from 'containers/IndexPage/index.jsx'
+import BasePage from 'containers/BasePage/index.jsx'
+import TopNav from 'components/TopNav/index.jsx'
 // import * as appActions from '../../reducers/app/appActions'
 import {changeText, buttonClick} from 'reducers/app/appActions'
+import style from './style.scss'
 
 //App
 class App extends Component{
@@ -17,10 +20,15 @@ class App extends Component{
         //actions和text这两个props在第5步中会解释
         const { actions, text} = this.props;
         return (
-            <div>
-                <Hello actions={actions} text={text}/>
-                <Change actions={actions}/>
-                <IndexPage/>
+            <div className={style.base}>
+                <TopNav/>
+                {
+                    // <Hello actions={actions} text={text}/>
+                    // <Change actions={actions}/>
+                }
+                <BasePage>
+                    <Hello actions={actions} text={text}/>
+                </BasePage>
             </div>
         );
     }

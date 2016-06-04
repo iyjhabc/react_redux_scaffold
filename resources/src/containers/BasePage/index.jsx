@@ -3,25 +3,14 @@ import { createStore,bindActionCreators } from 'redux';
 import { Provider ,connect } from 'react-redux';
 import style from './style.scss'
 
-export default class IndexPage extends Component{
+export default class BasePage extends Component{
     constructor(props) {
         super(props);
     }
     
     render(){
-        console.error(style);
         return <div className={style.page_box}>
-            Hello World
+            {this.props.children}
         </div>
     }
 }
-
-// function mapStateToProps(state) {
-// }
-
-// function mapDispatchToProps(dispatch){
-//     return{
-//     }
-// }
-
-// export default connect(mapStateToProps,mapDispatchToProps)(IndexPage);
