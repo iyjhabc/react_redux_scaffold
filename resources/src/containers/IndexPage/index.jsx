@@ -9,7 +9,6 @@ export default class IndexPage extends Component{
     }
     
     render(){
-        console.error(style);
         return <div className={style.page_box}>
             Hello World
         </div>

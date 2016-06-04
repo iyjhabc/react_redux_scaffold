@@ -27,7 +27,7 @@ class App extends Component{
                     // <Change actions={actions}/>
                 }
                 <BasePage>
-                    <Hello actions={actions} text={text}/>
+                    {this.props.children}
                 </BasePage>
             </div>
         );
