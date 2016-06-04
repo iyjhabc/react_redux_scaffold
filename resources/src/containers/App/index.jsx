@@ -3,6 +3,7 @@ import { createStore,bindActionCreators } from 'redux';
 import { Provider ,connect } from 'react-redux';
 import Change from 'components/Change/index.jsx'
 import Hello from 'components/Hello/index.jsx'
+import IndexPage from 'containers/IndexPage/index.jsx'
 // import * as appActions from '../../reducers/app/appActions'
 import {changeText, buttonClick} from 'reducers/app/appActions'
 
@@ -19,6 +20,7 @@ class App extends Component{
             <div>
                 <Hello actions={actions} text={text}/>
                 <Change actions={actions}/>
+                <IndexPage/>
             </div>
         );
     }
