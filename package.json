@@ -23,7 +23,7 @@
     "webpack": "^1.13.1"
   },
   "scripts": {
-    "dev": "webpack-dev-server -d --hot --inline --progress --colors --quiet false --noInfo false --port 3000",
+    "dev": "webpack-dev-server -d --hot --inline --progress --colors --quiet false --noInfo false --history-api-fallback --port 3000",
     "start": "NODE_ENV=development npm run dev"
   },
   "repository": {
