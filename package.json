@@ -13,18 +13,28 @@
     "react-dom": "^15.1.0",
     "react-redux": "^4.4.5",
     "react-router": "^2.4.1",
-    "redux": "^3.5.2"
+    "redux": "^3.5.2",
+    "body-parser": "~1.15.1",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.13.4",
+    "serve-favicon": "~2.3.0",
+    "jade": "~1.11.0",
+    "morgan": "~1.7.0"
   },
   "devDependencies": {
     "css-loader": "^0.23.1",
     "node-sass": "^3.7.0",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.1",
-    "webpack": "^1.13.1"
+    "webpack": "^1.13.1",
+    "concurrently": "^0.1.1"
   },
   "scripts": {
     "dev": "webpack-dev-server -d --hot --inline --progress --colors --quiet false --noInfo false --history-api-fallback --port 3000",
-    "start": "NODE_ENV=development npm run dev"
+    
+    "start": "concurrent --kill-others \"npm run dev\" \"npm run api\"",
+    "api": "node ./api/bin/www"
   },
   "repository": {
     "type": "git",
